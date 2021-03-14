@@ -118,7 +118,13 @@ IF you're working on a forked version of the website, you will need to make a pu
 
 From the "Pull tab" on your forked version of the site, click "New pull request". 
 
-![](https://cdn-images-1.medium.com/max/1200/1*RhBl51iPyWl5w9g1e5LV8A.png)
+On the next screen, you can review your changes and compare to the current version on the main repo. You should see a message in green which says "Able to merge". 
+
+From the "Pull tab" on your forked version of the site, click "New pull request". After reviewing changes, click "Create pull request."
+
+*If you don't see "Able to merge", it means there is a merge conflict. If you're not sure how to fix a merge conflict, get in touch with the docs maintainer (@noahniuwa) on Telegram to get help.*
+
+![](blob:https://medium.com/95e98051-a42f-4564-81c0-292d56d04a8e)
 
 
 ## Editing Tips:
