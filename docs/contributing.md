@@ -3,7 +3,7 @@ id: contributing
 title: How to Contribute to the Docs
 ---
 
-This page is a guide to help users with updating this documentation page. It's written for users with minimal technical knowledge. For those with web development experience, we recommend cloning the entire project locally from the [official repo](https://github.com/royalefinancev1/docs), and following the instructions on the official [Docusaurus 2.0 documentation website](https://v2.docusaurus.io/docs/installation#running-the-development-server). 
+This page is a guide to help users with updating this documentation page. It's written for users with minimal technical knowledge. For those with web development experience, we recommend cloning the entire project locally from the [official repo](https://github.com/MantraDAO/mdao-docs), and following the instructions on the official [Docusaurus 2.0 documentation website](https://v2.docusaurus.io/docs/installation#running-the-development-server). 
 
 ## Basic Concepts
 
@@ -14,6 +14,8 @@ To get started, you should understand some basic concepts first:
 The documents on the docs site are written using Markdown, which is a markup language like HTML that is used for defining how content will display on a web page. However, it is much much simpler and easier than HTML, and anyone can pick it up and get started in a few minutes - no need for programming skills. 
 
 The [markdownguide.org](https://www.markdownguide.org/) website has some great guides and tutorials which will get you up to speed in no time. Their [cheat sheet](https://www.markdownguide.org/cheat-sheet/) is the quickest way to get started.
+
+If you don't want to use Markdown, we still got you covered. You can install the [GitHub Writer Chrome Plugin](https://ckeditor.com/github-writer/) which allows you to edit Markdown files directly on GitHub with a WYSIWYG editor.
 
 ### Docusaurus 2.0
 
@@ -31,19 +33,24 @@ The documentation website source files are hosted on GitHub, and the live websit
 
 Whenever the source files on GitHub are changed, Netlify will detect that a change occurred, and update the live website with the changed content. There are several ways to change the GitHub source files:
 
-## Ways to Edit them Docs
+## How to Edit them Docs
 
 :::caution
-Editing the sidebar and navbar requires editing configuration files. If you haven't read and understood the [Docusaurus 2.0 documentation](https://v2.docusaurus.io/docs/) on these topics, please don't attempt to modify the configuration files. If you need help modifying sidebar or navbar, ask your friendly neighborhood web developer or contact the docs maintainer - @noahniuwa on Telegram.
+Editing the sidebar and navbar requires editing configuration files. If you haven't read and understood the [Docusaurus 2.0 documentation](https://v2.docusaurus.io/docs/) on these topics, please don't attempt to modify the configuration files. If you need help modifying sidebar or navbar, ask your friendly neighborhood web developer to take a look or contact the docs maintainer - @noahniuwa on Telegram.
 :::
 
-### 1. Directly on GitHub
 
 GitHub has a built in Markdown editor which allows you to open, edit, preview, and commit new changes for any Markdown files (files ending in `.md`). You can use this method from any browser without any special tools or set up. This is the best option for small edits which need to be made quickly such as typos, broken links, or any other very small edits.
 
-1. *Open the `docs` folder:*  
+0. Fork the repo
+
+If you don't have access to make commits directly to the repo, you will need to fork it. To do so, click the "Fork" button while signed in to your GitHub account from the [main repo page.](https://github.com/MantraDAO/mdao-docs) This will create a copy of the docs website in your own account, and you will be free to modify it as you wish. In a later step, we'll tell you how to request to add your changes to the main site with a "Pull Request".
+
+![](https://cdn-images-1.medium.com/max/1200/1*IxE11sUFcIuS6AZ_CDr7aQ.png)
+
+1. *Open the `mdao-docs` folder:*  
     
-  From the main repo for the docs site, open up the `docs` folder in order to view all the Markdown files which are used to make individual pages on the docs site.     
+  From the main repo for the docs site (or the one you just forked), open up the `docs` folder in order to view all the Markdown files which are used to make individual pages on the docs site.     
    
     ![](https://cdn-images-1.medium.com/max/1200/1*hNrrFq8DGFmhWI4xyDaRsQ.png)     
   
@@ -58,6 +65,7 @@ GitHub has a built in Markdown editor which allows you to open, edit, preview, a
   ![](https://cdn-images-1.medium.com/max/1200/1*9zYKJvqVu6S7xd__8qeTGQ.png)
 
 3. *Begin making edits*
+*Remember, if you're  not comfortable with Markdown, we recommend trying the [GitHub Writer Chrome Plugin](https://ckeditor.com/github-writer/) which will add an easy to use editor to all Markdown pages on GitHub.*
 
 Make any edits here. Pay special attention to the top section. This section is part of Markdown and is called the Frontmatter. It stores data about the file. This one has two fields, `id`, and `title`. `id` is not displayed to the user and is just used by the documentation software for reference. Generally speaking you should never change it. `title` however *is* displayed to the user. It is used as the title and label on the sidebar. Feel free to edit it. 
 
@@ -94,7 +102,7 @@ As you can see, there are several errors, let's fix them. Click "Edit file" to g
 
   And everything looks good! We will save it in the next step.
 
-5. "Commit changes" to make changes go live
+5. "Commit changes" to make changes go live 
 
 Click "Commit changes" while on the master branch to add changes to the repository and make them go live on the website:
 
@@ -103,6 +111,15 @@ Click "Commit changes" while on the master branch to add changes to the reposito
 The page is accessible at the URL which matches the document `id` exactly "links-downloads":
 
 ![](https://cdn-images-1.medium.com/max/1200/1*2BB_5SlS_EXhVox9PUtFxQ.png)
+ 
+6. (Only if you forked the site) Make a pull request
+
+IF you're working on a forked version of the website, you will need to make a pull request to propose your changes be added to the main site.
+
+From the "Pull tab" on your forked version of the site, click "New pull request". 
+
+![](https://cdn-images-1.medium.com/max/1200/1*RhBl51iPyWl5w9g1e5LV8A.png)
+
 
 ## Editing Tips:
 
@@ -114,7 +131,7 @@ There are some quirks you should be aware of while editing with Markdown.
 
 
 
-## Different ways to edit the site:
+## Other ways to edit the site:
 
 
 Depending on your skill level and the type of editing you want to do, you will want to choose a different method for editing:
@@ -133,8 +150,6 @@ For this method, first sign up with [HackMD](https://hackmd.io/), a cloud based 
 This method is recommended only for advanced users.
 :::
 
-If you have a bit of experience with HTML/CSS and JavaScript, you may want to try cloning the entire project locally from the [official repo](https://github.com/royalefinancev1/docs), and following the instructions on the official [Docusaurus 2.0 documentation website](https://v2.docusaurus.io/docs/installation#running-the-development-server) to run a local dev server, make changes there, and push your local commits to the main repo. 
+If you have a bit of experience with HTML/CSS and JavaScript, you may want to try cloning the entire project locally from the [official repo](https://github.com/MantraDAO/mdao-docs), and following the instructions on the official [Docusaurus 2.0 documentation website](https://v2.docusaurus.io/docs/installation#running-the-development-server) to run a local dev server, make changes there, and push your local commits to the main repo. 
 
 We won't have step by step instructions for this method as it is aimed at web developers who should be able to get started from just the [official docs](https://v2.docusaurus.io/).
-
-
